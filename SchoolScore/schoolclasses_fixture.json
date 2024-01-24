@@ -1,0 +1,354 @@
+[
+    {
+        "model": "score.schoolclass",
+        "pk": 1,
+        "fields": {
+            "class_number": 1,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 2,
+        "fields": {
+            "class_number": 1,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 3,
+        "fields": {
+            "class_number": 1,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 4,
+        "fields": {
+            "class_number": 1,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 5,
+        "fields": {
+            "class_number": 2,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 6,
+        "fields": {
+            "class_number": 2,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 7,
+        "fields": {
+            "class_number": 2,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 8,
+        "fields": {
+            "class_number": 2,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 9,
+        "fields": {
+            "class_number": 3,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 10,
+        "fields": {
+            "class_number": 3,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 11,
+        "fields": {
+            "class_number": 3,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 12,
+        "fields": {
+            "class_number": 3,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 13,
+        "fields": {
+            "class_number": 4,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 14,
+        "fields": {
+            "class_number": 4,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 15,
+        "fields": {
+            "class_number": 4,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 16,
+        "fields": {
+            "class_number": 4,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 17,
+        "fields": {
+            "class_number": 5,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 18,
+        "fields": {
+            "class_number": 5,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 19,
+        "fields": {
+            "class_number": 5,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 20,
+        "fields": {
+            "class_number": 5,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 21,
+        "fields": {
+            "class_number": 6,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 22,
+        "fields": {
+            "class_number": 6,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 23,
+        "fields": {
+            "class_number": 6,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 24,
+        "fields": {
+            "class_number": 6,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 25,
+        "fields": {
+            "class_number": 7,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 26,
+        "fields": {
+            "class_number": 7,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 27,
+        "fields": {
+            "class_number": 7,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 28,
+        "fields": {
+            "class_number": 7,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 29,
+        "fields": {
+            "class_number": 8,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 30,
+        "fields": {
+            "class_number": 8,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 31,
+        "fields": {
+            "class_number": 8,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 32,
+        "fields": {
+            "class_number": 8,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 33,
+        "fields": {
+            "class_number": 9,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 34,
+        "fields": {
+            "class_number": 9,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 35,
+        "fields": {
+            "class_number": 9,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 36,
+        "fields": {
+            "class_number": 9,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 37,
+        "fields": {
+            "class_number": 10,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 38,
+        "fields": {
+            "class_number": 10,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 39,
+        "fields": {
+            "class_number": 10,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 40,
+        "fields": {
+            "class_number": 10,
+            "class_letter": "Г"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 41,
+        "fields": {
+            "class_number": 11,
+            "class_letter": "А"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 42,
+        "fields": {
+            "class_number": 11,
+            "class_letter": "Б"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 43,
+        "fields": {
+            "class_number": 11,
+            "class_letter": "В"
+        }
+    },
+    {
+        "model": "score.schoolclass",
+        "pk": 44,
+        "fields": {
+            "class_number": 11,
+            "class_letter": "Г"
+        }
+    }
+]

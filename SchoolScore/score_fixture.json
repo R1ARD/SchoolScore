@@ -1,0 +1,94 @@
+// scores_fixture.json
+
+[
+  {
+    "model": "score.score",
+    "pk": 1,
+    "fields": {
+      "event": 1,
+      "school_class": 1,
+      "rating": 90
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 2,
+    "fields": {
+      "event": 1,
+      "school_class": 2,
+      "rating": 85
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 3,
+    "fields": {
+      "event": 1,
+      "school_class": 3,
+      "rating": 78
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 4,
+    "fields": {
+      "event": 2,
+      "school_class": 4,
+      "rating": 92
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 5,
+    "fields": {
+      "event": 2,
+      "school_class": 5,
+      "rating": 88
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 6,
+    "fields": {
+      "event": 2,
+      "school_class": 6,
+      "rating": 79
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 7,
+    "fields": {
+      "event": 3,
+      "school_class": 7,
+      "rating": 95
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 8,
+    "fields": {
+      "event": 3,
+      "school_class": 8,
+      "rating": 87
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 9,
+    "fields": {
+      "event": 3,
+      "school_class": 9,
+      "rating": 82
+    }
+  },
+  {
+    "model": "score.score",
+    "pk": 10,
+    "fields": {
+      "event": 4,
+      "school_class": 10,
+      "rating": 91
+    }
+  }
+]
