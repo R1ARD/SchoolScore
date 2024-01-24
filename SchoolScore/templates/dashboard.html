@@ -3,7 +3,6 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Таблица активности</h1>
     <table>
         <thead>
             <tr>
@@ -22,7 +21,7 @@
                             {% if score %}
                                 <a href="{% url 'score_update' pk=score.pk %}">{{ score.rating }}</a>
                             {% else %}
-                                <a href="{% url 'score_create' %}">-</a>
+                                -
                             {% endif %}
                         </td>
                     {% endfor %}
@@ -38,4 +37,5 @@
             {% endfor %}
         </tbody>
     </table>
+    <a href="{% url 'score_create' %}">Поставить оценку</a>
 {% endblock content %}
