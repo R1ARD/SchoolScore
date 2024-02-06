@@ -73,7 +73,7 @@ def score_table(request):
                                                 'class_count': len(scores_list)}
 
     context = {'score_matrix': score_matrix, 'overall_average_scores': overall_average_scores, 'average_scores': average_scores}
-    return render(request, 'HighSchool.html', context)
+    return render(request, 'ElementarySchool.html', context)
 
 
 def create_all_score_combinations(request):
