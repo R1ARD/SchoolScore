@@ -118,5 +118,34 @@
       "name": "Посвящение в математики",
       "date": "2024-03-10"
     }
+  },
+  {
+    "model": "score.event",
+    "pk": 16,
+    "fields": {
+      "name": "День воссоединения Крыма и России",
+      "date": "2024-03-17"
+    }
+  },
+  {
+    "model": "score.event",
+    "pk": 17,
+    "fields": {
+      "name": "Дисциплина"
+    }
+  },
+  {
+    "model": "score.event",
+    "pk": 18,
+    "fields": {
+      "name": "Внешний вид"
+    }
+  },
+  {
+    "model": "score.event",
+    "pk": 19,
+    "fields": {
+      "name": "Поведение"
+    }
   }
 ]

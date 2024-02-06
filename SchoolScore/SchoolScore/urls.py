@@ -19,7 +19,8 @@ from django.urls import path
 from score import views
 
 urlpatterns = [
-    path('', views.ScoreListView.as_view(), name='dashboard'),
+    path('', views.score_table, name='dashboard'),
+    path('create_scores/', views.create_all_score_combinations, name='create_all_scores'),
     path('score/create/', views.ScoreCreateView.as_view(), name='score_create'),
     path('score/<int:pk>/update/', views.ScoreUpdateView.as_view(), name='score_update'),
     path('admin/', admin.site.urls),

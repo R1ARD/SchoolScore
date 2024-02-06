@@ -28,7 +28,7 @@ class SchoolClass(models.Model):
 
 class Event(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название мероприятия')
-    date = models.DateField(verbose_name='Дата мероприятия')
+    date = models.DateField(verbose_name='Дата мероприятия', blank=True, null=True)
 
     def __str__(self):
         return f"{self.name} - {self.date}"
