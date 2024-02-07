@@ -1,8 +1,7 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 	background-color: #9c76eb;
 	color: white;
 }
@@ -24,7 +23,7 @@ table thead th {
 	text-align: center;
 	padding: 0.5em;
 	background: #8564ca;
-	font-size: 20px;
+	font-size: 16px;
 }
 table thead tr th:first-child {
 	border-radius: 8px 0 0 8px;

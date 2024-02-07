@@ -4,18 +4,10 @@ from .models import Score, Event, SchoolClass
 from django.urls import reverse_lazy
 from django.shortcuts import redirect, render
 
-class ScoreListView(ListView):
-    model = Score
-    template_name = 'HighSchool.html'
-    context_object_name = 'score_list'
+def index(request):
+    return render(request, "home.html")
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['event_list'] = Event.objects.all()
-        context['schoolClass_list'] = SchoolClass.objects.all()
-
-
-def score_table(request):
+def score_table(request, param):
     classes = SchoolClass.objects.all()
     events = Event.objects.all()
 
@@ -73,7 +65,11 @@ def score_table(request):
                                                 'class_count': len(scores_list)}
 
     context = {'score_matrix': score_matrix, 'overall_average_scores': overall_average_scores, 'average_scores': average_scores}
-    return render(request, 'ElementarySchool.html', context)
+
+    if param:
+        return render(request, 'ElementarySchool.html', context)
+    else:
+        return render(request, 'HighSchool.html', context)
 
 
 def create_all_score_combinations(request):
@@ -95,9 +91,12 @@ class ScoreCreateView(CreateView):
     template_name = 'score_create.html'  # Замените на ваш шаблон
     fields = '__all__'  # Укажите необходимые поля для создания
 
-
     def get_success_url(self):
-        return reverse_lazy('dashboard')  # Замените 'dashboard' на имя вашего URL-шаблона
+        # Получаем значение параметра из URL
+        param_value = self.kwargs['param']
+
+        # Создаем обратную ссылку с передачей значения параметра
+        return reverse_lazy('scores', kwargs={'param': param_value})
 
 class ScoreUpdateView(UpdateView):
     model = Score
@@ -105,4 +104,8 @@ class ScoreUpdateView(UpdateView):
     fields = ['rating']  # Укажите необходимые поля для изменения
 
     def get_success_url(self):
-        return reverse_lazy('dashboard')
+        # Получаем значение параметра из URL
+        param_value = self.kwargs['param']
+
+        # Создаем обратную ссылку с передачей значения параметра
+        return reverse_lazy('scores', kwargs={'param': param_value})

@@ -9,7 +9,9 @@
                 <th>Мероприятие/ Класс</th>
                 {% for school_class in score_matrix.0 %}
                     {% if not forloop.first %}
-                        <th>{{ school_class }}</th>
+                        {% if school_class.class_number < 5 %}
+                            <th>{{ school_class }}</th>
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
             </tr>
@@ -21,14 +23,16 @@
                         <td class="row-start">{{ row.0.name }}</td>
                         {% for score in row %}
                             {% if not forloop.first %}
-                                {% if score.rating %}
-                                        <td>
-                                            <a href="{% url 'score_update' score.pk %}">{{ score }}</a>
-                                        </td>
-                                {% else %}
-                                        <td>
-                                            <a href="{% url 'score_update' pk=score.pk %}">-</a>
-                                        </td>
+                                {% if score.schoolclass.class_number < 5 %}
+                                    {% if score.rating %}
+                                            <td>
+                                                <a href="{% url 'score_update' pk=score.pk param=1 %}">{{ score }}</a>
+                                            </td>
+                                    {% else %}
+                                            <td>
+                                                <a href="{% url 'score_update' pk=score.pk param=1 %}">-</a>
+                                            </td>
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
@@ -40,19 +44,23 @@
                         Средний балл по классу
                     </td>
                     {% for school_class, avg_score in average_scores.items %}
-                        <td>
-                            {{ avg_score|floatformat:"2"  }}
-                        </td>
+                        {% if school_class.class_number < 5 %}
+                            <td>
+                                {{ avg_score|floatformat:"2"  }}
+                            </td>
+                        {% endif %}
                     {% endfor %}
                 </tr>
                 <tr>
                     <td  class="row-start">
                         Средний балл по параллели
                     </td>
-                    {% for class_number, data in overall_average_scores.items %}
-                        <td colspan="{{ data.class_count }}" >
-                            {{ data.avg_score|floatformat:"2" }}
-                        </td>
+                    {% for class_number, data in overall_average_scores.items|slice:"5:" %}
+                        {% if class_number < 5 %}
+                            <td colspan="{{ data.class_count }}">
+                                {{ data.avg_score|floatformat:"2" }}
+                            </td>
+                        {% endif %}
                     {% endfor %}
                 </tr>
 

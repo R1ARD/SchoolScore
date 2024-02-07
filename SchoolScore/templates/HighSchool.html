@@ -26,11 +26,11 @@
                                 {% if score.schoolclass.class_number >= 5 and score.schoolclass.class_number <= 11 %}
                                     {% if score.rating %}
                                             <td>
-                                                <a href="{% url 'score_update' score.pk %}">{{ score }}</a>
+                                                <a href="{% url 'score_update' pk=score.pk param=0 %}">{{ score }}</a>
                                             </td>
                                     {% else %}
                                             <td>
-                                                <a href="{% url 'score_update' pk=score.pk %}">-</a>
+                                                <a href="{% url 'score_update' pk=score.pk param=0 %}">-</a>
                                             </td>
                                     {% endif %}
                                 {% endif %}
