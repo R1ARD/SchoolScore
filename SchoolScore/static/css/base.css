@@ -23,7 +23,7 @@ table thead th {
 	text-align: center;
 	padding: 0.5em;
 	background: #8564ca;
-	font-size: 16px;
+	font-size: 20px;
 }
 table thead tr th:first-child {
 	border-radius: 8px 0 0 8px;
@@ -34,7 +34,7 @@ table thead tr th:last-child {
 td {
 	text-align: center;
 	border: 1px solid;
-	padding: 1em;
+	padding: 6px 10px ;
 	vertical-align: center;
 }
 table tbody tr:nth-child(even){

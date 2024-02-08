@@ -6,38 +6,26 @@
     <table>
         <thead>
             <tr>
-                <th>Мероприятие/ Класс</th>
-                {% for school_class in score_matrix.0 %}
-                    {% if not forloop.first %}
-                        {% if school_class.class_number >= 5 and school_class.class_number <= 11 %}
+                <th>Время действовать!</th>
+                {% for school_class in school_classes %}
                             <th>{{ school_class }}</th>
-                        {% endif %}
-                    {% endif %}
                 {% endfor %}
             </tr>
         </thead>
         <tbody>
             {% for row in score_matrix %}
-                {% if not forloop.first %}
-                    <tr>
-                        <td class="row-start">{{ row.0.name }}</td>
-                        {% for score in row %}
-                            {% if not forloop.first %}
-                                {% if score.schoolclass.class_number >= 5 and score.schoolclass.class_number <= 11 %}
-                                    {% if score.rating %}
-                                            <td>
-                                                <a href="{% url 'score_update' pk=score.pk param=0 %}">{{ score }}</a>
-                                            </td>
-                                    {% else %}
-                                            <td>
-                                                <a href="{% url 'score_update' pk=score.pk param=0 %}">-</a>
-                                            </td>
-                                    {% endif %}
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
-                    </tr>
-                {% endif %}
+                <tr>
+                    <td class="row-start">{{ row.event.name }}</td>
+                    {% for score in row.scores %}
+                        {% if score and score.schoolclass.class_number >= 5 and score.schoolclass.class_number <= 11 %}
+                            <td>
+                                <a href="{% url 'score_update' pk=score.pk param=0 %}">{{ score.rating }}</a>
+                            </td>
+                        {% else %}
+                            <td>-</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
             {% endfor %}
                 <tr>
                     <td class="row-start">
@@ -55,7 +43,7 @@
                     <td  class="row-start">
                         Средний балл по параллели
                     </td>
-                    {% for class_number, data in overall_average_scores.items|slice:"5:" %}
+                    {% for class_number, data in overall_average_scores.items%}
                         {% if class_number >= 5 %}
                             <td colspan="{{ data.class_count }}">
                                 {{ data.avg_score|floatformat:"2" }}

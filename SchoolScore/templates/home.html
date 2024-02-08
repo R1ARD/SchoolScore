@@ -3,11 +3,15 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <a href="{% url 'scores' param=1 %}">
+    <a href="{% url 'elementary'%}">
         1-4
     </a>
     <br>
-    <a href="{% url 'scores' param=0 %}">
+    <a href="{% url 'high' %}">
         5-11
+    </a>
+    <br>
+    <a href="{% url 'score_create' %}">
+        Поставить оценку
     </a>
 {% endblock content %}

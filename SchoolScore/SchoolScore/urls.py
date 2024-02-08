@@ -20,8 +20,8 @@ from score import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('scores/<int:param>', views.score_table, name='scores'),
-    path('create_scores/', views.create_all_score_combinations, name='create_all_scores'),
+    path('high/', views.HighSchoolView, name='high'),
+    path('elementary/', views.ElementarySchoolView, name='elementary'),
     path('score/create/', views.ScoreCreateView.as_view(), name='score_create'),
     path('score/<int:pk>/update/<int:param>/', views.ScoreUpdateView.as_view(), name='score_update'),
     path('admin/', admin.site.urls),

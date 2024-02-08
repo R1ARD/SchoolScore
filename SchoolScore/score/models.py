@@ -1,6 +1,8 @@
 # models.py
 from django.db import models
 from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
+from django.db.models import Max
+
 
 class SchoolClass(models.Model):
     class_number = models.IntegerField(
@@ -14,7 +16,7 @@ class SchoolClass(models.Model):
         max_length=1,
         validators=[
             RegexValidator(
-                regex='^[а-я]$',
+                regex='^[А-Я]$',
                 message='Введите одну кириллическую букву.',
                 code='invalid_class_letter'
             )
@@ -29,7 +31,8 @@ class SchoolClass(models.Model):
 class Event(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название мероприятия')
     date = models.DateField(verbose_name='Дата мероприятия', blank=True, null=True)
-
+    is_visible = models.BooleanField(default=True, verbose_name='Видимость')
+    is_below = models.BooleanField(default=False, verbose_name='Прикрепить снизу')
     def __str__(self):
         return f"{self.name} - {self.date}"
 
