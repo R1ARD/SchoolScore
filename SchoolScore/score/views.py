@@ -1,15 +1,15 @@
-from django.views.generic import ListView, UpdateView, CreateView
+from django.views.generic import UpdateView, CreateView
 from django.db.models import Avg
 from .models import Score, Event, SchoolClass
 from django.urls import reverse_lazy
-from django.shortcuts import redirect, render
-
+from django.shortcuts import  render
+from .forms import EventForm
 def index(request):
     return render(request, "home.html")
 
 def HighSchoolView(request):
     school_classes = SchoolClass.objects.filter(class_number__gte=5, class_number__lte=11).order_by('class_number', 'class_letter')
-    events = Event.objects.all().filter(is_visible=True).order_by('date')
+    events = Event.objects.all().filter(is_visible=True).order_by('is_below', 'date',)
 
     # Создаем матрицу для хранения оценок
     score_matrix = []
@@ -127,6 +127,14 @@ class ScoreUpdateView(UpdateView):
     model = Score
     template_name = 'score_update.html'
     fields = ['rating']
+
+    def get_success_url(self):
+        return reverse_lazy('home')
+
+class EventCreateView(CreateView):
+    model = Event
+    template_name = 'event_create.html'
+    form_class = EventForm
 
     def get_success_url(self):
         return reverse_lazy('home')

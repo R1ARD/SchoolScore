@@ -24,5 +24,6 @@ urlpatterns = [
     path('elementary/', views.ElementarySchoolView, name='elementary'),
     path('score/create/', views.ScoreCreateView.as_view(), name='score_create'),
     path('score/<int:pk>/update/<int:param>/', views.ScoreUpdateView.as_view(), name='score_update'),
+    path('event/create/', views.EventCreateView.as_view(), name='event_create'),
     path('admin/', admin.site.urls),
 ]
